@@ -1,0 +1,40 @@
+name: Fibonacci Light
+type: theme
+description: Light theme for Drupal 8 based on bootstrap framework with additional classes and behaviours for ease of use
+package: Other
+core: 8.x
+version: VERSION
+libraries:
+  - fibonacci_light/bootstrap
+  - fibonacci_light/open_framework
+  - fibonacci_light/base
+  - fibonacci_light/field
+#  - fibonacci_light/theme-settings
+#  - fibonacci_light/header
+  - fibonacci_light/custom
+
+ckeditor_stylesheets:
+  - vendor/bootstrap/css/bootstrap.min.css
+  - css/cke.css
+
+
+base theme: stable
+
+regions:
+  site_login: 'Site Login'
+  header: 'Header'
+  navigation: 'Navigation'
+  search_box: 'Search Box'
+  full_bleed: 'Full Bleed'
+  main_top: 'Main Top'
+  sidebar_first: 'First sidebar'
+  highlighted: Highlighted
+  help: 'Help'
+  content_top: 'Content Top'
+  content: 'Content Body'
+  content_row2: 'Content: 2-column flow'
+  content_row3: 'Content: 3-column flow'
+  content_lower: 'Content: Lower'
+  sidebar_second: 'Second sidebar'
+  main_bottom: 'Main: Bottom'
+  footer: 'Footer'

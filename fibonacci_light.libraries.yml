@@ -1,0 +1,61 @@
+bootstrap:
+  version: 3.3.6
+  css:
+    theme:
+      vendor/bootstrap/css/bootstrap.min.css: {}
+      vendor/bootstrap/css/bootstrap-theme.min.css: {}
+  js:
+    vendor/bootstrap/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+
+base:
+  version: VERSION
+  css:
+    theme:
+      css/base.css: {}
+  js:
+    js/base.js: {}
+
+fonts-sans:
+  version: VERSION
+  css:
+    theme:
+      css/font-sans.css: {}
+      //fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,400italic,300italic: { type: external }
+
+open_framework:
+  version: VERSION
+  css:
+    theme:
+      css/open_framework.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+styles-light:
+  version: VERSION
+  css:
+    theme:
+      css/styles-light.css: {}
+
+header:
+  version: VERSION
+  css:
+    theme:
+      css/header.css: {}
+  
+field:
+  version: VERSION
+  css:
+    theme:
+      css/field.css: {}
+
+custom:
+  version: VERSION
+  css:
+    theme:
+      css/custom.css: {}

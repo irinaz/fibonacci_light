@@ -1,0 +1,58 @@
+{% extends 'themes/fibonacci_light/templates/page.html.twig' %}
+{% block content %}
+{{ attach_library('fibonacci_light/full-bleed') }}
+	<div class="accordion" id="accordion" style="background-position: 50% 0;">
+	    <div class="full-bleed">
+			{{ page.full_bleed }}
+	    </div>
+	</div>
+
+	<main role="main" class="main">
+		<div class="layout-content">
+
+            {{ page.highlighted }}
+            {{ page.help }}
+            {{ page.main_top }}
+
+			<div id="content" class="content full">
+				<div class="container">
+					<div class="row">
+
+                        {% if page.sidebar_first %}
+							<aside class="layout-sidebar-first" role="complementary">
+								<div class="col-md-3">
+                                    {{ page.sidebar_first }}
+								</div>
+							</aside>
+                        {% endif %}
+
+                        {% if page.sidebar_second and page.sidebar_first %}
+                            {% set col_class = 'col-md-6' %}
+                        {% elseif page.sidebar_second or page.sidebar_first %}
+                            {% set col_class = 'col-md-9' %}
+                        {% else %}
+                            {% set col_class = 'col-md-12' %}
+                        {% endif %}
+
+						<div class="{{ col_class }}">
+                            {{ page.content_top }}
+                            {{ page.content }}
+                            {{ page.content_row2 }}
+                            {{ page.content_row3 }}
+                            {{ page.content_lower }}
+						</div>
+
+                        {% if page.sidebar_second %}
+							<aside class="layout-sidebar-second" role="complementary">
+								<div class="col-md-3">
+                                    {{ page.sidebar_second }}
+								</div>
+							</aside>
+                        {% endif %}
+					</div>
+                    {{ page.main_bottom }}
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

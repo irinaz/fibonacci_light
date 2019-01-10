@@ -1,0 +1,115 @@
+/*-- header styles, move to base.css ---*/
+
+/*.site-name, .site-slogan {*/
+  /*margin-left: 120px;*/
+/*}*/
+
+.site-name::before {
+  display: none;
+}
+
+.logo img {
+  width: 100px;
+}
+
+
+
+.card {
+  padding: 1em;
+  border: 1px solid #e5e5e5;
+}
+
+.card:hover {
+  box-shadow: 0px 15px 20px 0 rgba(0, 0, 0, 0.2);
+  transform: translate(0, -4px);
+}
+
+
+/*-- facilities view ---*/
+
+.views-field-field-university, .mode {
+  margin-bottom: 1em;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5f574f;
+}
+
+.views-field-field-featured-thumbnail-image {
+  margin-bottom: 1em;
+}
+
+.views-label-field-primary-contact, .contact {
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #5f574f;
+}
+
+.facilities_and_laser_modes {
+  border: 4px solid;
+
+}
+
+/*-- facility page -- */
+
+.field--name-field-featured-thumbnail-image.field--type-image {
+  float: right;
+  margin-left: 1em;
+}
+
+#block-views-block-laser-mode-block-1 {
+  margin-top: 2em;
+}
+
+
+@media (min-width: 1024px) {  /*-- display laser modes tow-per-row on desktop only -- */
+  #block-views-block-laser-mode-block-1 .views-row,
+  .facilities-and-laser-modes .views-row
+  {
+    clear: none;
+    width: 47%;
+    float: left;
+    margin-right: 3%;
+  }
+}
+
+.field--name-field-university { /* use same style on facilities views */
+  margin-bottom: 1em;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5f574f;
+}
+
+.field--name-field-primary-contact { /* use same style on views */
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #5f574f;
+}
+
+/*--- display of table with mode details --*/
+.page-node-type-laser-mode article .field__label {
+  width: 16em;
+}
+
+article .views-row { /*need more specific style */
+  clear: none;
+
+}
+
+/*-- colors ---*/
+
+.gainsboro {
+  background-color: gainsboro;
+}
+
+.silver {
+  background-color: silver;
+}
+
+/*-- toolbar styles for admin dropdowns in fibonacci theme ---*/
+#toolbar-administration a {
+  font-weight: normal;
+}
